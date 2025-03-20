@@ -174,6 +174,7 @@ class Wav2Vec2Model(nn.Module):
         pos_conv_groups: int = 16,
     ):
         super().__init__()
+        self.encoder_embed_dim = encoder_embed_dim
         
         # Feature Extractor
         self.feature_extractor = ConvFeatureExtractionModel(
